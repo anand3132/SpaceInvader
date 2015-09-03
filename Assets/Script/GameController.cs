@@ -71,7 +71,6 @@ public class GameController : MonoBehaviour
 			break;
 
 		case GameState.kGameLose:
-			gameLevel=0;
 			playerController.score=0;
 			if(Input.GetKeyUp(KeyCode.Space))
 			{
