@@ -1,0 +1,308 @@
+fileFormatVersion: 2
+guid: 5f0c8b2728582684f879d33600e7a89e
+timeCreated: 1440970868
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: enemy_1a
+    21300002: enemy_1b
+    21300004: enemy_2a
+    21300006: space_invaders_sprite_3
+    21300008: enemy_3a
+    21300010: enemy_3b
+    21300012: enemy_4a
+    21300014: player_1a
+    21300016: guard_1a
+    21300018: guard_1b
+    21300020: guard_1c
+    21300022: guard_1d
+    21300024: guard_1e
+    21300026: space_invaders_sprite_13
+    21300028: guard_1f
+    21300030: ammo_1a
+    21300032: ammo_2a
+    21300034: ammo_3a
+    21300036: space_invaders_BG
+    21300038: space_invaders_splash
+    21300040: space_invaders_Hi_Score
+    21300042: space_invaders_score
+    21300044: space_invaders_round
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 50
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: enemy_1a
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1794
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemy_1b
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1794
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemy_2a
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1794
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: space_invaders_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1794
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemy_3a
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1793
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemy_3b
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1793
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: enemy_4a
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1790
+        width: 48
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_1a
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1791
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: guard_1a
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1790
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: guard_1b
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 1792
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: guard_1c
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 1793
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: guard_1d
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1792
+        width: 44
+        height: 33
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: guard_1e
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1738
+        width: 45
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: space_invaders_sprite_13
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 1743
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: guard_1f
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1744
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ammo_1a
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 1746
+        width: 2
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ammo_2a
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1207
+        width: 4
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ammo_3a
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1207
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: space_invaders_BG
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 818
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: space_invaders_splash
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1856
+        width: 593
+        height: 179
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: space_invaders_Hi_Score
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1753
+        width: 136
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: space_invaders_score
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1753
+        width: 85
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: space_invaders_round
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 1078
+        width: 72
+        height: 18
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
