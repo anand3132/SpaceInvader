@@ -24,15 +24,15 @@ public class GameController : MonoBehaviour
 	//Awake is always called before any Start functions
 	void Awake()
 	{
-		//Check if instance already exists
-		if (instance == null)
+		//Check if instance already exist
+		if (instance==null)
 		{
 			//if not, set instance to this
 			instance = this;
 			//instance.respawnEnemies();
 		}
 		//If instance already exists and it's not this:
-		else if (instance != this)
+		else if (instance!=this)
 		{	
 			//Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
 			Destroy(gameObject);    
@@ -47,46 +47,48 @@ public class GameController : MonoBehaviour
 	{
 		switch (gameState)
 		{
-		case GameState.kTapToContinue:
-			if(Input.anyKeyDown)
+			case GameState.kTapToContinue:
 			{
-				RespawnEnemies();
-				playerController.PlayerRespawn();
-				SetState(GameState.kGamePlay);
+				if(Input.anyKeyDown)
+				{
+					RespawnEnemies();
+					playerController.PlayerRespawn();
+					SetState(GameState.kGamePlay);
+				}
 			}
-			break;
+				break;
 
-		case GameState.kGamePlay:
-			LevelGenerator();
-			CheckForPauseKey();
-			break;
+			case GameState.kGamePlay:
+				CheckForPauseKey();
+				break;
 
-		case GameState.kGameWin:
-
-			if(Input.GetKeyUp(KeyCode.Space))
+			case GameState.kGameWin:
 			{
-				SetState(GameState.kTapToContinue);
+				if(Input.GetKeyUp(KeyCode.Space))
+				{
+					SetState(GameState.kTapToContinue);
+				}
+				CheckForPauseKey();
 			}
-			CheckForPauseKey();
-			break;
+				break;
 
-		case GameState.kGameLose:
-			playerController.score=0;
-			if(Input.GetKeyUp(KeyCode.Space))
+			case GameState.kGameLose:
 			{
-				SetState(GameState.kTapToContinue);
+				playerController.score=0;
+				if(Input.GetKeyUp(KeyCode.Space))
+				{
+					SetState(GameState.kTapToContinue);
+				}
 			}
-			//checkForPauseKey();
-			break;
-
-		case GameState.kPause:
+				break;
+			case GameState.kPause:
 			{
 				if(Input.GetKeyUp(KeyCode.Escape))
 				{
 					SetState(GameState.kGamePlay);
 				}
 			}
-			break;
+				break;
 		}
 	}//update
 
@@ -106,7 +108,7 @@ public class GameController : MonoBehaviour
 
 	public bool IsGamePlay()
 	{
-		return (gameState==GameState.kGamePlay );
+		return (gameState==GameState.kGamePlay);
 	}
 
 	public void SetState(GameState state)
@@ -124,17 +126,6 @@ public class GameController : MonoBehaviour
 		{
 			SetState(GameState.kPause);
 		}
-	}
-
-	//Increase the speed of the enemy after certain decrease in enemy count
-	void LevelGenerator()
-	{
-		if(enemyController.EnemyCount()<18)
-			enemyController.maxSpeed=4;
-		else if(enemyController.EnemyCount()<10)
-			enemyController.maxSpeed=6;
-		else if(enemyController.EnemyCount()<1)
-			SetState(GameState.kGameWin);
 	}
 
 	//Enemy regenerator
@@ -156,6 +147,8 @@ public class GameController : MonoBehaviour
 		case GameState.kTapToContinue:
 		{
 			GUI.Label(new Rect(Screen.width*0.4f,Screen.height*0.18f, 200, 50), "TAP TO CONTINUE.");
+			GUI.Label(new Rect(Screen.width*0.4f,Screen.height*0.35f, 200, 50), "Ctrl / Mouse L button == FIRE");
+			GUI.Label(new Rect(Screen.width*0.4f,Screen.height*0.38f, 200, 50), "Left / Right arrow keys == MOVE");
 		}
 			break;
 		case GameState.kGamePlay:

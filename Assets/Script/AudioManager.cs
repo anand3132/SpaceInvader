@@ -19,7 +19,7 @@ public class AudioManager : MonoBehaviour
 		{
 			if (_clipName==audioClip[i].name)
 			{			
-				audioComponent.clip=audioClip[i];
+				audioComponent.clip = audioClip[i];
 				audioComponent.Play();
 				return;
 			}

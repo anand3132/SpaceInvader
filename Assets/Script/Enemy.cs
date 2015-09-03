@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 	public Sprite 	enemyNormalSprite 	= null;
 	public Sprite	enemyHitSprite 		= null;
 	private int 	enemyHealth			= 100;
-	private float 	timeToGoNormal 		= 0.0f;
+	private float 	timeToGoNormal 		= 0.0f;		//in seconds
 	private bool 	isHitHappened		= true;
 
 	// Use this for initialization
@@ -19,7 +19,6 @@ public class Enemy : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		//Check if GameController instance already exists
 		if(!GameController.instance.IsGamePlay())
 			return;
 
@@ -29,8 +28,8 @@ public class Enemy : MonoBehaviour
 			timeToGoNormal-=Time.deltaTime;
 			if(timeToGoNormal<=0.0f)
 			{
-				timeToGoNormal=0.0f;
-				isHitHappened=false;
+				timeToGoNormal = 0.0f;
+				isHitHappened = false;
 				SpriteRenderer _spriteRenderer = (SpriteRenderer)gameObject.GetComponent<SpriteRenderer>();
 				_spriteRenderer.sprite = enemyNormalSprite;
 				_spriteRenderer.color = Color.white;
@@ -41,14 +40,14 @@ public class Enemy : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D _other)
 	{
 		//Check if enemy hit by player ammo 
-		if(gameObject.tag == "Enemy" && _other.tag=="PlayerAmmo")
+		if(gameObject.tag=="Enemy" && _other.tag=="PlayerAmmo")
 		{
-			HitOnEnemy(50);
+			HitOnEnemy(50);	//reduce 50 life points when the player ammo hits a normal enemy.
 		}
 		//Check if BigBoss hit by player ammo 
-		if(gameObject.tag == "BigBoss" && _other.tag=="PlayerAmmo")
+		if(gameObject.tag=="BigBoss" && _other.tag=="PlayerAmmo")
 		{
-			HitOnEnemy(10);
+			HitOnEnemy(10);	//reduce 10 life points when the player ammo hits a BigBoss enemy.
 		}
 	}
 
@@ -68,10 +67,10 @@ public class Enemy : MonoBehaviour
 		{
 			//change the sprite on hit
 			SpriteRenderer _spriteRenderer = (SpriteRenderer)gameObject.GetComponent<SpriteRenderer>();
-			_spriteRenderer.sprite=enemyHitSprite;
-			_spriteRenderer.color=Color.red;
-			timeToGoNormal=0.15f;
-			isHitHappened=true;
+			_spriteRenderer.sprite = enemyHitSprite;
+			_spriteRenderer.color = Color.red;
+			timeToGoNormal = 0.15f;	//in seconds
+			isHitHappened = true;
 		}
 	}// HitOnEnemy()
 }
