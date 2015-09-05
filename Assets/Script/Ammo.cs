@@ -18,10 +18,9 @@ public class Ammo : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		//Check if GameController instance already exists
 		if(!GameController.instance.IsGamePlay())
 			return;
-		
+		//seed at which ammo to be propelled
 		transform.localPosition += (gameObject.transform.up * Time.deltaTime*2.0f);
 	}
 
