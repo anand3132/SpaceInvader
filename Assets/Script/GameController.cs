@@ -135,11 +135,24 @@ public class GameController : MonoBehaviour
 		{
 			GameObject.Destroy(enemyController.gameObject);
 		}
-		Object _obj = Resources.Load("Prefab/EnemyController");
+		Object _obj;
+		switch(gameLevel)
+		{
+			case 1:
+				_obj = Resources.Load("Prefab/GameLevel_1");
+				break;
+			case 2:
+				_obj = Resources.Load("Prefab/GameLevel_2");
+				break;
+			default:
+				_obj = Resources.Load("Prefab/GameLevel_1");
+				break;
+
+		}//switch case
+
 		GameObject _enemyObj = (GameObject)GameObject.Instantiate(_obj);
 		enemyController = _enemyObj.GetComponent<EnemyController>();
 	}
-
 	void OnGUI()
 	{
 		switch (gameState)
