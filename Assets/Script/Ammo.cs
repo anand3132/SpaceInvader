@@ -4,6 +4,7 @@ using System.Collections;
 //class specify Ammo behaviour
 public class Ammo : MonoBehaviour
 {
+	public float bulletSpeed=2.0f;
 	void OnEnable()
 	{
 		//Destroy the Ammo after every 4 seconds
@@ -21,7 +22,7 @@ public class Ammo : MonoBehaviour
 		if(!GameController.instance.IsGamePlay())
 			return;
 		//seed at which ammo to be propelled
-		transform.localPosition += (gameObject.transform.up * Time.deltaTime*2.0f);
+		transform.localPosition += (gameObject.transform.up * Time.deltaTime*bulletSpeed);
 	}
 
 	void DestroyAmmo()
