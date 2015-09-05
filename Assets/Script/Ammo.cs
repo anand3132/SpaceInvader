@@ -32,7 +32,7 @@ public class Ammo : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D _other)
 	{
-		//TODO: comment explaining about who collides with whome.
+		//check collision wether enemy/player collide with player/enemy ammo
 		switch(_other.tag)
 		{
 		case "Enemy":
