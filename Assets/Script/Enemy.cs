@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
 	private int 	enemyHealth			= 100;
 	private float 	timeToGoNormal 		= 0.0f;		//in seconds
 	private bool 	isHitHappened		= true;
+	public float 	baseMargine			=-1;
 
 	// Use this for initialization
 	void Start ()
@@ -35,6 +36,13 @@ public class Enemy : MonoBehaviour
 				_spriteRenderer.color = Color.white;
 			}
 		}
+//		Vector3 _pos=new Vector3();
+//		_pos=transform.position;
+//		if(transform.position.y<baseMargine)
+//		{
+//			_pos.y=0;
+//			transform.position=_pos;
+//		}
 	}
 
 	void OnTriggerEnter2D(Collider2D _other)

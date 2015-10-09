@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.IO;
 //This class controls diffrent game states in the game
 public class GameController : MonoBehaviour
 {
@@ -136,6 +137,7 @@ public class GameController : MonoBehaviour
 			GameObject.Destroy(enemyController.gameObject);
 		}
 		Object _obj;
+		Debug.Log(gameLevel);
 		switch(gameLevel)
 		{
 			case 1:
@@ -153,8 +155,10 @@ public class GameController : MonoBehaviour
 		GameObject _enemyObj = (GameObject)GameObject.Instantiate(_obj);
 		enemyController = _enemyObj.GetComponent<EnemyController>();
 	}
+
 	void OnGUI()
 	{
+
 		switch (gameState)
 		{
 		case GameState.kTapToContinue:
@@ -187,5 +191,5 @@ public class GameController : MonoBehaviour
 		}
 			break;
 		}
-	}
+	}//OnGUI
 }
